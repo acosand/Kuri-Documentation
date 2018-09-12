@@ -1,0 +1,9 @@
+---
+layout: default
+---
+{% for group in site.data.guides %}
+    {% assign group_name = group[0] %}
+    {% assign group = group[1] %}
+    {% capture group_url %}/guides/{{ group_name }}/{% endcapture %}
+{% endfor %}
+{{ content }}

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description"
+          content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="stylesheet" type="text/css" href="{{ site.asset_path }}/css/main.css">
+    {% feed_meta %}
+    {% seo %}
+</head>
+<body class="{{ page.page_class }}">
+    {{ content }}
+
+    <script src="{{ site.asset_path }}/jquery/dist/jquery.min.js"></script>
+
+    <script src="{{ site.asset_path }}/popper.js/dist/umd/popper.min.js">
+    </script>
+
+	<script src="{{ site.asset_path }}/bootstrap/dist/js/bootstrap.min.js">
+    </script>
+</body>
+</html>

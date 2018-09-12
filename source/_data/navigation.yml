@@ -1,0 +1,8 @@
+- name: Kuri Robot
+  link: /
+- name: Getting Started
+  link: /getting-started/
+- name: Guides
+  link: /guides/
+- name: Reference
+  link: /reference/

@@ -6,19 +6,18 @@ module Jekyll
     priority :highest
 
     def initialize(config)
-      logger.warn("Generating guides")
+      Jekyll.logger.warn("Generating guides")
     end
 
     def generate(site)
       @site = site
+      group = []
       site.collections['guides'].docs.each do |guide|
         group = find_group(guide)
-        guide.data['group_data'] = group
         unless group.nil?
           group['guides'] << {
               'title' => guide.data['title'],
-              'url' => guide.url,
-              'summary' => guide.data['summary']
+              'url' => guide.url
           }
         end
       end

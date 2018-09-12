@@ -1,0 +1,67 @@
+@import 'colors';
+@import 'header';
+
+$navbar-width: 226px;
+
+.navbar__wrapper {
+  position: fixed;
+  width: $navbar-width;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.navbar {
+  background-color: $black;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding-top: $header-height;
+  position: absolute;
+  width: $navbar-width;
+}
+
+.navbar img {
+  top: 0;
+  left: 0;
+  padding-top: $header-height;
+  width: $navbar-width;
+}
+
+.content {
+  margin-left: $navbar-width;
+  height: 100%;
+}
+
+.menu {
+  height: 100%;
+  padding-top: 1em;
+
+  li:first-child {
+    margin-top: -13px;
+  }
+
+  .menu__item a {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 3em;
+    color: white;
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    height: 4em;
+    margin: 0.5em 0;
+    padding: 1.2em;
+    position: relative;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $gray;
+    }
+  }
+
+  .menu__item.active a {
+    background-color: $red;
+  }
+}

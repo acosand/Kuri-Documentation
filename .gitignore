@@ -1,0 +1,8 @@
+__public__
+.DS_Store
+.sass-cache/
+source/stylesheets/
+log/
+.bundle/
+vendor/
+.jekyll-metadata

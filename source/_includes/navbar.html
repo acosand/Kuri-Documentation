@@ -1,0 +1,5 @@
+<img src="{{ site.asset_path }}/images/kuri-logo.png">
+
+{% for item in site.data.navigation %}
+  <li class="menu__item"><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
+{% endfor %}
