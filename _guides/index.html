@@ -1,0 +1,12 @@
+---
+layout: default
+title: Guides
+---
+<h1>Guides</h1>
+<ul>
+    {% for guide in site.guides %}
+        <li>
+            <a href="{{ guide.url }}">{{ guide.title }}</a>
+        </li>
+    {% endfor %}
+</ul>

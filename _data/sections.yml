@@ -1,0 +1,19 @@
+- name: Getting Started
+  url: /guides/getting-started
+  icon: rocket
+
+- name: Guides
+  url: /guides
+  icon: chalkboard
+
+- name: Reference
+  url: /reference
+  icon: book-open
+
+- name: Examples
+  url: https://github.com/KuriRobot
+  icon: code
+
+- name: Help
+  url: https://discourse.ros.org
+  icon: users

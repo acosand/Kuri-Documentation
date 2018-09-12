@@ -1,0 +1,135 @@
+---
+---
+@import "syntax-highlighting";
+@import "bootstrap/functions";
+@import "variables";
+@import "bootstrap-custom";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #f6f7fa;
+}
+
+header {
+  background: #ffffff none repeat scroll 0 0;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.04);
+  display: inline-block !important;
+  line-height: 23px;
+  //padding: 15px;
+  width: 100%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+a:focus, a:hover, a {
+  outline: none;
+  text-decoration: none;
+}
+
+li, ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.v-align {
+  vertical-align: top;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+.logo {
+  text-align: center;
+
+  img {
+    max-width: 100px;
+    padding: 16px 0 17px;
+    width: 80%;
+  }
+}
+
+#navigation {
+  background: #0e1a35;
+  padding: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.menu {
+  a {
+    border-bottom: 1px solid #0d172e;
+    border-top: 1px solid #0d172e;
+    color: #ffffff;
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 28px 20px;
+    text-decoration: none;
+
+    .active {
+      background: #122143;
+      border-left: 5px solid #5584ff;
+      padding-left: 15px;
+    }
+
+    &:hover {
+      background: #122143 none repeat scroll 0 0;
+      border-left: 5px solid #5584ff;
+      display: block;
+      padding-left: 15px;
+    }
+  }
+
+  i {
+    font-size: 20px;
+    margin-right: 15px;
+    color: #5584ff;
+  }
+}
+
+.hidden-xs {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.content {
+  padding: 0 20px;
+
+  h1 {
+    color: #0e1a35;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0;
+    padding: 21px 0;
+  }
+}
+
+.search {
+  width: 100%;
+  i {
+    padding-left: 20px;
+  }
+
+  input {
+    border: none;
+    padding: 15px 9px;
+    background: rgba(0, 0, 0, 0) no-repeat scroll;
+    color: #8492af;
+
+    &:focus {
+      outline: 0 !important;
+      -webkit-appearance: none;
+    }
+  }
+}

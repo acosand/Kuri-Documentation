@@ -1,0 +1,12 @@
+---
+layout: default
+title: Reference
+---
+<h1>Reference</h1>
+<ul>
+    {% for reference in site.reference %}
+        <li>
+            <a href="{{ reference.url }}">{{ reference.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
