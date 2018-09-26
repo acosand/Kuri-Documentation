@@ -10,6 +10,7 @@ plugins_dir: /plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-toc
   - rouge
 
 debug: true
@@ -17,6 +18,14 @@ verbose: true
 
 markdown: redcarpet
 highlighter: rouge
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks",
+               "disable_indented_code_blocks",
+               "footnotes", "tables", "autolink"]
+
+toc:
+  min_level: 2
+  max_level: 6
 
 collections:
   guides:
