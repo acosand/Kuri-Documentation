@@ -2,6 +2,8 @@
 layout: default
 ---
 <div class="row">
-    <h1 class="title">{{ page.title | escape }}</h1>
-    {{ content | markdownify }}
+    <div class="col-12">
+        <h1 class="title">{{ page.title | escape }}</h1>
+        {{ content | markdownify }}
+    </div>
 </div>
