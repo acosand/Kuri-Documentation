@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="logo">
+        {% if page.layout == "guide" and page.category == "getting-started" %}
+        <a href="/guides/getting-started"><h1>Getting Started</h1></a>
+        {% elsif page.layout == "guide" %}
+        <a href="/guides"><h1>Guides</h1></a>
+        {% elsif page.layout == "reference" %}
+        <a href="/reference"><h1>Reference</h1></a>
+        {% endif %}
+    </div>
+    <div class="menu">
+        <ul>
+            {% if page.layout == "guide" %}
+                {% for guide in site.guides %}
+                <li>
+                    <a href="{{ guide.url }}">{{ guide.title }}</a>
+                </li>
+                {% endfor %}
+            {% elsif page.layout == "reference" %}
+                {% for reference in site.references %}
+                <li>
+                    <a href="{{ reference.url }}">{{ reference.title }}</a>
+                </li>
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+</div>

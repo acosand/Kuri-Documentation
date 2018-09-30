@@ -1,0 +1,87 @@
+navbar {
+  background: #0e1a35;
+  width: 100%;
+  padding: 10px;
+  align-items: normal;
+  color: $white;
+  overflow: hidden;
+  @include browser-prefix(transition, all 0.5s ease);
+
+  .logo {
+    width: 100%;
+    max-height: $headings-line-height * $h1-font-size;
+    text-align: center;
+    vertical-align: bottom;
+
+    a {
+      .active, &:hover {
+        text-decoration: none;
+      }
+
+      h1 {
+        color: $white;
+      }
+
+      img {
+        padding: auto;
+        height: 100%;
+      }
+    }
+  }
+
+  .menu {
+    margin: 0 auto;
+
+    li, ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      a {
+        text-decoration: none;
+        border-bottom: $border-width solid #0d172e;
+        border-top: $border-width solid #0d172e;
+        display: block;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bold;
+        padding: 28px 10px;
+
+        .active, &:hover {
+          background: #122143;
+          margin-left: 0;
+          padding-left: 10px;
+        }
+
+        i {
+          font-size: $font-size-lg;
+          margin: 0 5px;
+          color: #5584ff;
+        }
+      }
+    }
+  }
+}
+
+.section-nav {
+  background-color: #fff;
+  margin: 5px 0;
+  padding: 10px 30px;
+  border: $border-width solid #e8e8e8;
+  border-radius: 3px;
+}
+
+%transition {
+  @include browser-prefix(transition, all 0.5s ease);
+}
+
+@mixin col-x-list {
+  @for $i from 1 through 12 {
+    .col-#{$i} { @extend %transition; }
+    .col-xs-#{$i} { @extend %transition; }
+    .col-sm-#{$i} { @extend %transition; }
+    .col-md-#{$i} { @extend %transition; }
+    .col-lg-#{$i} { @extend %transition; }
+    .col-xl-#{$i} { @extend %transition; }
+  }
+}
+@include col-x-list;
