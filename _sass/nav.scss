@@ -1,11 +1,20 @@
-navbar {
-  background: #0e1a35;
-  width: 100%;
+$navbar-color: #0e1a25;
+
+.navbar {
+  background: $navbar-color;
   padding: 10px;
   align-items: normal;
   color: $white;
   overflow: hidden;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
   @include browser-prefix(transition, all 0.5s ease);
+
+  .secondary {
+    background: lighten($navbar-color, 10%);
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+  }
 
   .logo {
     width: 100%;
@@ -42,19 +51,14 @@ navbar {
         border-bottom: $border-width solid #0d172e;
         border-top: $border-width solid #0d172e;
         display: block;
-        font-size: $font-size-lg;
-        font-weight: $font-weight-bold;
-        padding: 28px 10px;
+        padding: 10px;
 
         .active, &:hover {
-          background: #122143;
-          margin-left: 0;
-          padding-left: 10px;
+          background: lighten($navbar-color, 20%);
         }
 
         i {
-          font-size: $font-size-lg;
-          margin: 0 5px;
+          margin: 28px 5px;
           color: #5584ff;
         }
       }

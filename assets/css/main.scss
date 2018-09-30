@@ -18,14 +18,10 @@ body {
   position: relative;
 }
 
-.content {
-  padding: 0 20px;
-
-  h1 {
-    color: $headings-color;
-    font-size: $headings-line-height;
-    font-weight: $headings-font-weight;
-    margin: 0;
-    padding: 21px 0;
-  }
+h1 .title {
+  color: $headings-color;
+  font-size: $h1-font-size;
+  font-weight: $headings-font-weight;
+  margin: 0;
+  padding: 21px 0;
 }

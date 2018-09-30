@@ -12,13 +12,13 @@
         <ul>
             {% if page.layout == "guide" %}
                 {% for guide in site.guides %}
-                <li>
+                <li {% if guide.url == page.url %}class="active"{% endif %}>
                     <a href="{{ guide.url }}">{{ guide.title }}</a>
                 </li>
                 {% endfor %}
             {% elsif page.layout == "reference" %}
                 {% for reference in site.references %}
-                <li>
+                <li {% if reference.url == page.url %}class="active"{% endif %}>
                     <a href="{{ reference.url }}">{{ reference.title }}</a>
                 </li>
                 {% endfor %}
