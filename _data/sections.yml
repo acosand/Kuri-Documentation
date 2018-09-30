@@ -4,7 +4,7 @@
 
 - name: Guides
   url: /guides
-  icon: chalkboard
+  icon: map-signs
 
 - name: Reference
   url: /reference
