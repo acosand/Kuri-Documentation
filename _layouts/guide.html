@@ -3,12 +3,12 @@ layout: default
 toc: true
 ---
 <div class="row">
-    <div class="col-12 col-md-{% if page.toc %}9 order-1 order-md-0{% else %}12{% endif %}">
+    <div class="col-12 col-xl-{% if page.toc %}9 order-1 order-xl-0{% else %}12{% endif %}">
         <h1 class="title">{{ page.title | escape }}</h1>
         {{ content | inject_anchors }}
     </div>
     {% if page.toc %}
-    <div class="col-12 col-md-3 order-0 order-md-1">
+    <div class="col-12 col-xl-3 order-0 order-xl-1 d-none d-sm-block">
         {% include toc.html %}
     </div>
     {% endif %}
