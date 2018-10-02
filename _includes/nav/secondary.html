@@ -12,15 +12,30 @@
         <ul>
             {% if page.layout == "guide" %}
                 {% for guide in site.guides %}
-                <li {% if guide.url == page.url %}class="active"{% endif %}>
-                    <a href="{{ guide.url }}">{{ guide.title }}</a>
-                </li>
+                    <li {% if guide.url == page.url %}class="active"{% endif %}>
+                        <a href="{{ guide.url }}">{{ guide.title }}</a>
+                    </li>
                 {% endfor %}
             {% elsif page.layout == "reference" %}
-                {% for reference in site.references %}
-                <li {% if reference.url == page.url %}class="active"{% endif %}>
-                    <a href="{{ reference.url }}">{{ reference.title }}</a>
-                </li>
+                {% for reference in site.reference %}
+                    <li {% if reference.url == page.url %}class="active"{% endif %}>
+                        {% if reference.category == "package" %}
+                            {% assign icon = "archive" %}
+                        {% elsif reference.category == "node" %}
+                            {% assign icon = "certificate" %}
+                        {% elsif reference.category == "launch" %}
+                            {% assign icon = "play" %}
+                        {% elsif reference.category contains "message" %}
+                            {% assign icon = "envelope" %}
+                        {% else %}
+                            {% assign icon = "question" %}
+                        {% endif %}
+
+                        <a href="{{ reference.url }}">
+                            <i class="fas fa-{{ icon }}" aria-hidden="true"></i>
+                            {{ reference.title }}
+                        </a>
+                    </li>
                 {% endfor %}
             {% endif %}
         </ul>
