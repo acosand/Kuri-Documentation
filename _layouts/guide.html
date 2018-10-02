@@ -1,15 +1,14 @@
 ---
 layout: default
-toc: true
 ---
 <div class="row">
-    <div class="col-12 col-xl-{% if page.toc %}9 order-1 order-xl-0{% else %}12{% endif %}">
+    <div class="col-12 col-xl-{% unless page.no_toc %}9 order-1 order-xl-0{% else %}12{% endunless %}">
         <h1 class="title">{{ page.title | escape }}</h1>
-        {{ content | inject_anchors }}
+        {{ content | markdownify }}
     </div>
-    {% if page.toc %}
+    {% unless page.no_toc %}
     <div class="col-12 col-xl-3 order-0 order-xl-1 d-none d-sm-block">
-        {% include toc.html %}
+        {% include toc.html html=content id="toc" class="section-nav" h_min=2 h_max=6 %}
     </div>
-    {% endif %}
+    {% endunless %}
 </div>
