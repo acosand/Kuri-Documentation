@@ -2,6 +2,7 @@
 layout: guide
 title: Using the vision bridge and modules
 category: advanced
+toc: true
 tags: 
 - vision
 ---
